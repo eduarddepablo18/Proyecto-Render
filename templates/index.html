@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Mi Proyecto en Render</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f9; }
-        h1 { color: #333; }
-        .caja { background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); }
-    </style>
+  <meta charset="UTF-8">
+  <title>Evento click - Nivel 3</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background 0.3s;
+    }
+    button {
+      margin: 4px;
+      padding: 8px 14px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <div class="caja">
-        <!-- Aquí se mostrará la variable enviada desde Python -->
-        <h1>{{ mensaje }}</h1>
-        <p>¡Este HTML fue renderizado por Flask y desplegado en Render!</p>
-    </div>
+  <h1>Cambiar el color de fondo</h1>
+  <button id="btnRojo">Fondo rojo</button>
+  <button id="btnAzul">Fondo azul</button>
+ 
+  <script>
+    const btnRojo = document.getElementById("btnRojo");
+    const btnAzul = document.getElementById("btnAzul");
+ 
+    btnRojo.addEventListener("click", function () {
+      document.body.style.backgroundColor = "#FF0000";
+    });
+ 
+    btnAzul.addEventListener("click", function () {
+      document.body.style.backgroundColor = "#1883ff";
+    });
+  </script>
 </body>
 </html>
